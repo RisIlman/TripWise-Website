@@ -1,0 +1,993 @@
+{
+  "source": "https://github.com/RisIlman/TripWise-Budget-Tracker/tree/main",
+  "sourceSha256": {
+    "pricing.py": "40fac1ab4fa122bd1d8f00bf7c74187af03d38c29ae389f88897f5b34fb147ac",
+    "expenses.py": "eab126a55905c57e203727393e49833b5c857a2884f3946ad66cbe19ca07a8f2",
+    "itinerary.py": "3c2c64c67653ccf0363c69b0cfd595798948a2a56d217541e9c401ac59339892",
+    "summary.py": "37f0cdcc9b3b36498c35601a4cfc87401cf1be545cfdac4fb46ed5917cbeff77",
+    "trip.py": "591f550d69233ce4c54e8e941fb39f31596d8336e336b186e445e4f099eced08"
+  },
+  "budgetCases": [
+    {
+      "trip": {
+        "region": "ASEAN",
+        "country": "Thailand",
+        "days": 5,
+        "travelers": 2,
+        "budgetRM": 5000,
+        "season": "Low",
+        "travelFocus": "City-focused",
+        "dailyExpenses": {
+          "meals": {
+            "mode": "suggested",
+            "percentage": "",
+            "customAmountRM": ""
+          },
+          "miscellaneous": {
+            "mode": "suggested",
+            "percentage": "",
+            "customAmountRM": ""
+          }
+        }
+      },
+      "expected": {
+        "breakdown": {
+          "accommodation": 1545.6,
+          "public_transport": 253.5,
+          "return_transport": 1229.1,
+          "meals": 600,
+          "miscellaneous": 300,
+          "attractions": 60
+        },
+        "breakdown_pp": {
+          "accommodation": 772.8,
+          "public_transport": 126.75,
+          "return_transport": 614.55,
+          "meals": 300.0,
+          "miscellaneous": 150.0,
+          "attractions": 30.0
+        },
+        "total": 3988.2,
+        "per_person": 1994.1,
+        "budget_pp": 2500.0,
+        "remaining": 1011.8,
+        "remaining_pp": 505.9,
+        "status": "WITHIN BUDGET"
+      }
+    },
+    {
+      "trip": {
+        "region": "ASEAN",
+        "country": "Thailand",
+        "days": 5,
+        "travelers": 2,
+        "budgetRM": 5000,
+        "season": "Low",
+        "travelFocus": "City-focused",
+        "dailyExpenses": {
+          "meals": {
+            "mode": "increase",
+            "percentage": 25,
+            "customAmountRM": ""
+          },
+          "miscellaneous": {
+            "mode": "decrease",
+            "percentage": 50,
+            "customAmountRM": ""
+          }
+        }
+      },
+      "expected": {
+        "breakdown": {
+          "accommodation": 1545.6,
+          "public_transport": 253.5,
+          "return_transport": 1229.1,
+          "meals": 750.0,
+          "miscellaneous": 150.0,
+          "attractions": 60
+        },
+        "breakdown_pp": {
+          "accommodation": 772.8,
+          "public_transport": 126.75,
+          "return_transport": 614.55,
+          "meals": 375.0,
+          "miscellaneous": 75.0,
+          "attractions": 30.0
+        },
+        "total": 3988.2,
+        "per_person": 1994.1,
+        "budget_pp": 2500.0,
+        "remaining": 1011.8,
+        "remaining_pp": 505.9,
+        "status": "WITHIN BUDGET"
+      }
+    },
+    {
+      "trip": {
+        "region": "ASEAN",
+        "country": "Thailand",
+        "days": 5,
+        "travelers": 2,
+        "budgetRM": 5000,
+        "season": "Low",
+        "travelFocus": "City-focused",
+        "dailyExpenses": {
+          "meals": {
+            "mode": "custom",
+            "percentage": "",
+            "customAmountRM": 0
+          },
+          "miscellaneous": {
+            "mode": "custom",
+            "percentage": "",
+            "customAmountRM": 12.75
+          }
+        }
+      },
+      "expected": {
+        "breakdown": {
+          "accommodation": 1545.6,
+          "public_transport": 253.5,
+          "return_transport": 1229.1,
+          "meals": 0,
+          "miscellaneous": 127.5,
+          "attractions": 60
+        },
+        "breakdown_pp": {
+          "accommodation": 772.8,
+          "public_transport": 126.75,
+          "return_transport": 614.55,
+          "meals": 0.0,
+          "miscellaneous": 63.75,
+          "attractions": 30.0
+        },
+        "total": 3215.7,
+        "per_person": 1607.85,
+        "budget_pp": 2500.0,
+        "remaining": 1784.3,
+        "remaining_pp": 892.15,
+        "status": "WITHIN BUDGET"
+      }
+    },
+    {
+      "trip": {
+        "region": "ASEAN",
+        "country": "Thailand",
+        "days": 5,
+        "travelers": 2,
+        "budgetRM": 5000,
+        "season": "Normal",
+        "travelFocus": "City-focused",
+        "dailyExpenses": {
+          "meals": {
+            "mode": "suggested",
+            "percentage": "",
+            "customAmountRM": ""
+          },
+          "miscellaneous": {
+            "mode": "suggested",
+            "percentage": "",
+            "customAmountRM": ""
+          }
+        }
+      },
+      "expected": {
+        "breakdown": {
+          "accommodation": 1545.6,
+          "public_transport": 253.5,
+          "return_transport": 1446.0,
+          "meals": 600,
+          "miscellaneous": 300,
+          "attractions": 60
+        },
+        "breakdown_pp": {
+          "accommodation": 772.8,
+          "public_transport": 126.75,
+          "return_transport": 723.0,
+          "meals": 300.0,
+          "miscellaneous": 150.0,
+          "attractions": 30.0
+        },
+        "total": 4205.1,
+        "per_person": 2102.55,
+        "budget_pp": 2500.0,
+        "remaining": 794.9,
+        "remaining_pp": 397.45,
+        "status": "WITHIN BUDGET"
+      }
+    },
+    {
+      "trip": {
+        "region": "ASEAN",
+        "country": "Thailand",
+        "days": 5,
+        "travelers": 2,
+        "budgetRM": 5000,
+        "season": "Normal",
+        "travelFocus": "City-focused",
+        "dailyExpenses": {
+          "meals": {
+            "mode": "increase",
+            "percentage": 25,
+            "customAmountRM": ""
+          },
+          "miscellaneous": {
+            "mode": "decrease",
+            "percentage": 50,
+            "customAmountRM": ""
+          }
+        }
+      },
+      "expected": {
+        "breakdown": {
+          "accommodation": 1545.6,
+          "public_transport": 253.5,
+          "return_transport": 1446.0,
+          "meals": 750.0,
+          "miscellaneous": 150.0,
+          "attractions": 60
+        },
+        "breakdown_pp": {
+          "accommodation": 772.8,
+          "public_transport": 126.75,
+          "return_transport": 723.0,
+          "meals": 375.0,
+          "miscellaneous": 75.0,
+          "attractions": 30.0
+        },
+        "total": 4205.1,
+        "per_person": 2102.55,
+        "budget_pp": 2500.0,
+        "remaining": 794.9,
+        "remaining_pp": 397.45,
+        "status": "WITHIN BUDGET"
+      }
+    },
+    {
+      "trip": {
+        "region": "ASEAN",
+        "country": "Thailand",
+        "days": 5,
+        "travelers": 2,
+        "budgetRM": 5000,
+        "season": "Normal",
+        "travelFocus": "City-focused",
+        "dailyExpenses": {
+          "meals": {
+            "mode": "custom",
+            "percentage": "",
+            "customAmountRM": 0
+          },
+          "miscellaneous": {
+            "mode": "custom",
+            "percentage": "",
+            "customAmountRM": 12.75
+          }
+        }
+      },
+      "expected": {
+        "breakdown": {
+          "accommodation": 1545.6,
+          "public_transport": 253.5,
+          "return_transport": 1446.0,
+          "meals": 0,
+          "miscellaneous": 127.5,
+          "attractions": 60
+        },
+        "breakdown_pp": {
+          "accommodation": 772.8,
+          "public_transport": 126.75,
+          "return_transport": 723.0,
+          "meals": 0.0,
+          "miscellaneous": 63.75,
+          "attractions": 30.0
+        },
+        "total": 3432.6,
+        "per_person": 1716.3,
+        "budget_pp": 2500.0,
+        "remaining": 1567.4,
+        "remaining_pp": 783.7,
+        "status": "WITHIN BUDGET"
+      }
+    },
+    {
+      "trip": {
+        "region": "ASEAN",
+        "country": "Thailand",
+        "days": 5,
+        "travelers": 2,
+        "budgetRM": 5000,
+        "season": "Peak",
+        "travelFocus": "City-focused",
+        "dailyExpenses": {
+          "meals": {
+            "mode": "suggested",
+            "percentage": "",
+            "customAmountRM": ""
+          },
+          "miscellaneous": {
+            "mode": "suggested",
+            "percentage": "",
+            "customAmountRM": ""
+          }
+        }
+      },
+      "expected": {
+        "breakdown": {
+          "accommodation": 1545.6,
+          "public_transport": 253.5,
+          "return_transport": 2024.3999999999999,
+          "meals": 600,
+          "miscellaneous": 300,
+          "attractions": 60
+        },
+        "breakdown_pp": {
+          "accommodation": 772.8,
+          "public_transport": 126.75,
+          "return_transport": 1012.1999999999999,
+          "meals": 300.0,
+          "miscellaneous": 150.0,
+          "attractions": 30.0
+        },
+        "total": 4783.5,
+        "per_person": 2391.75,
+        "budget_pp": 2500.0,
+        "remaining": 216.5,
+        "remaining_pp": 108.25,
+        "status": "WITHIN BUDGET"
+      }
+    },
+    {
+      "trip": {
+        "region": "ASEAN",
+        "country": "Thailand",
+        "days": 5,
+        "travelers": 2,
+        "budgetRM": 5000,
+        "season": "Peak",
+        "travelFocus": "City-focused",
+        "dailyExpenses": {
+          "meals": {
+            "mode": "increase",
+            "percentage": 25,
+            "customAmountRM": ""
+          },
+          "miscellaneous": {
+            "mode": "decrease",
+            "percentage": 50,
+            "customAmountRM": ""
+          }
+        }
+      },
+      "expected": {
+        "breakdown": {
+          "accommodation": 1545.6,
+          "public_transport": 253.5,
+          "return_transport": 2024.3999999999999,
+          "meals": 750.0,
+          "miscellaneous": 150.0,
+          "attractions": 60
+        },
+        "breakdown_pp": {
+          "accommodation": 772.8,
+          "public_transport": 126.75,
+          "return_transport": 1012.1999999999999,
+          "meals": 375.0,
+          "miscellaneous": 75.0,
+          "attractions": 30.0
+        },
+        "total": 4783.5,
+        "per_person": 2391.75,
+        "budget_pp": 2500.0,
+        "remaining": 216.5,
+        "remaining_pp": 108.25,
+        "status": "WITHIN BUDGET"
+      }
+    },
+    {
+      "trip": {
+        "region": "ASEAN",
+        "country": "Thailand",
+        "days": 5,
+        "travelers": 2,
+        "budgetRM": 5000,
+        "season": "Peak",
+        "travelFocus": "City-focused",
+        "dailyExpenses": {
+          "meals": {
+            "mode": "custom",
+            "percentage": "",
+            "customAmountRM": 0
+          },
+          "miscellaneous": {
+            "mode": "custom",
+            "percentage": "",
+            "customAmountRM": 12.75
+          }
+        }
+      },
+      "expected": {
+        "breakdown": {
+          "accommodation": 1545.6,
+          "public_transport": 253.5,
+          "return_transport": 2024.3999999999999,
+          "meals": 0,
+          "miscellaneous": 127.5,
+          "attractions": 60
+        },
+        "breakdown_pp": {
+          "accommodation": 772.8,
+          "public_transport": 126.75,
+          "return_transport": 1012.1999999999999,
+          "meals": 0.0,
+          "miscellaneous": 63.75,
+          "attractions": 30.0
+        },
+        "total": 4011.0,
+        "per_person": 2005.5,
+        "budget_pp": 2500.0,
+        "remaining": 989.0,
+        "remaining_pp": 494.5,
+        "status": "WITHIN BUDGET"
+      }
+    },
+    {
+      "trip": {
+        "region": "West Europe",
+        "country": "France",
+        "days": 5,
+        "travelers": 2,
+        "budgetRM": 5000,
+        "season": "Low",
+        "travelFocus": "City-focused",
+        "dailyExpenses": {
+          "meals": {
+            "mode": "suggested",
+            "percentage": "",
+            "customAmountRM": ""
+          },
+          "miscellaneous": {
+            "mode": "suggested",
+            "percentage": "",
+            "customAmountRM": ""
+          }
+        }
+      },
+      "expected": {
+        "breakdown": {
+          "accommodation": 2760.0,
+          "public_transport": 569.9999999999999,
+          "return_transport": 5589.6,
+          "meals": 1300,
+          "miscellaneous": 600,
+          "attractions": 60
+        },
+        "breakdown_pp": {
+          "accommodation": 1380.0,
+          "public_transport": 284.99999999999994,
+          "return_transport": 2794.8,
+          "meals": 650.0,
+          "miscellaneous": 300.0,
+          "attractions": 30.0
+        },
+        "total": 10879.6,
+        "per_person": 5439.8,
+        "budget_pp": 2500.0,
+        "remaining": -5879.6,
+        "remaining_pp": -2939.8,
+        "status": "EXCEEDING BUDGET"
+      }
+    },
+    {
+      "trip": {
+        "region": "West Europe",
+        "country": "France",
+        "days": 5,
+        "travelers": 2,
+        "budgetRM": 5000,
+        "season": "Low",
+        "travelFocus": "City-focused",
+        "dailyExpenses": {
+          "meals": {
+            "mode": "increase",
+            "percentage": 25,
+            "customAmountRM": ""
+          },
+          "miscellaneous": {
+            "mode": "decrease",
+            "percentage": 50,
+            "customAmountRM": ""
+          }
+        }
+      },
+      "expected": {
+        "breakdown": {
+          "accommodation": 2760.0,
+          "public_transport": 569.9999999999999,
+          "return_transport": 5589.6,
+          "meals": 1625.0,
+          "miscellaneous": 300.0,
+          "attractions": 60
+        },
+        "breakdown_pp": {
+          "accommodation": 1380.0,
+          "public_transport": 284.99999999999994,
+          "return_transport": 2794.8,
+          "meals": 812.5,
+          "miscellaneous": 150.0,
+          "attractions": 30.0
+        },
+        "total": 10904.6,
+        "per_person": 5452.3,
+        "budget_pp": 2500.0,
+        "remaining": -5904.6,
+        "remaining_pp": -2952.3,
+        "status": "EXCEEDING BUDGET"
+      }
+    },
+    {
+      "trip": {
+        "region": "West Europe",
+        "country": "France",
+        "days": 5,
+        "travelers": 2,
+        "budgetRM": 5000,
+        "season": "Low",
+        "travelFocus": "City-focused",
+        "dailyExpenses": {
+          "meals": {
+            "mode": "custom",
+            "percentage": "",
+            "customAmountRM": 0
+          },
+          "miscellaneous": {
+            "mode": "custom",
+            "percentage": "",
+            "customAmountRM": 12.75
+          }
+        }
+      },
+      "expected": {
+        "breakdown": {
+          "accommodation": 2760.0,
+          "public_transport": 569.9999999999999,
+          "return_transport": 5589.6,
+          "meals": 0,
+          "miscellaneous": 127.5,
+          "attractions": 60
+        },
+        "breakdown_pp": {
+          "accommodation": 1380.0,
+          "public_transport": 284.99999999999994,
+          "return_transport": 2794.8,
+          "meals": 0.0,
+          "miscellaneous": 63.75,
+          "attractions": 30.0
+        },
+        "total": 9107.1,
+        "per_person": 4553.55,
+        "budget_pp": 2500.0,
+        "remaining": -4107.1,
+        "remaining_pp": -2053.55,
+        "status": "EXCEEDING BUDGET"
+      }
+    },
+    {
+      "trip": {
+        "region": "West Europe",
+        "country": "France",
+        "days": 5,
+        "travelers": 2,
+        "budgetRM": 5000,
+        "season": "Normal",
+        "travelFocus": "City-focused",
+        "dailyExpenses": {
+          "meals": {
+            "mode": "suggested",
+            "percentage": "",
+            "customAmountRM": ""
+          },
+          "miscellaneous": {
+            "mode": "suggested",
+            "percentage": "",
+            "customAmountRM": ""
+          }
+        }
+      },
+      "expected": {
+        "breakdown": {
+          "accommodation": 2760.0,
+          "public_transport": 569.9999999999999,
+          "return_transport": 6576.000000000001,
+          "meals": 1300,
+          "miscellaneous": 600,
+          "attractions": 60
+        },
+        "breakdown_pp": {
+          "accommodation": 1380.0,
+          "public_transport": 284.99999999999994,
+          "return_transport": 3288.0000000000005,
+          "meals": 650.0,
+          "miscellaneous": 300.0,
+          "attractions": 30.0
+        },
+        "total": 11866.0,
+        "per_person": 5933.0,
+        "budget_pp": 2500.0,
+        "remaining": -6866.0,
+        "remaining_pp": -3433.0,
+        "status": "EXCEEDING BUDGET"
+      }
+    },
+    {
+      "trip": {
+        "region": "West Europe",
+        "country": "France",
+        "days": 5,
+        "travelers": 2,
+        "budgetRM": 5000,
+        "season": "Normal",
+        "travelFocus": "City-focused",
+        "dailyExpenses": {
+          "meals": {
+            "mode": "increase",
+            "percentage": 25,
+            "customAmountRM": ""
+          },
+          "miscellaneous": {
+            "mode": "decrease",
+            "percentage": 50,
+            "customAmountRM": ""
+          }
+        }
+      },
+      "expected": {
+        "breakdown": {
+          "accommodation": 2760.0,
+          "public_transport": 569.9999999999999,
+          "return_transport": 6576.000000000001,
+          "meals": 1625.0,
+          "miscellaneous": 300.0,
+          "attractions": 60
+        },
+        "breakdown_pp": {
+          "accommodation": 1380.0,
+          "public_transport": 284.99999999999994,
+          "return_transport": 3288.0000000000005,
+          "meals": 812.5,
+          "miscellaneous": 150.0,
+          "attractions": 30.0
+        },
+        "total": 11891.0,
+        "per_person": 5945.5,
+        "budget_pp": 2500.0,
+        "remaining": -6891.0,
+        "remaining_pp": -3445.5,
+        "status": "EXCEEDING BUDGET"
+      }
+    },
+    {
+      "trip": {
+        "region": "West Europe",
+        "country": "France",
+        "days": 5,
+        "travelers": 2,
+        "budgetRM": 5000,
+        "season": "Normal",
+        "travelFocus": "City-focused",
+        "dailyExpenses": {
+          "meals": {
+            "mode": "custom",
+            "percentage": "",
+            "customAmountRM": 0
+          },
+          "miscellaneous": {
+            "mode": "custom",
+            "percentage": "",
+            "customAmountRM": 12.75
+          }
+        }
+      },
+      "expected": {
+        "breakdown": {
+          "accommodation": 2760.0,
+          "public_transport": 569.9999999999999,
+          "return_transport": 6576.000000000001,
+          "meals": 0,
+          "miscellaneous": 127.5,
+          "attractions": 60
+        },
+        "breakdown_pp": {
+          "accommodation": 1380.0,
+          "public_transport": 284.99999999999994,
+          "return_transport": 3288.0000000000005,
+          "meals": 0.0,
+          "miscellaneous": 63.75,
+          "attractions": 30.0
+        },
+        "total": 10093.5,
+        "per_person": 5046.75,
+        "budget_pp": 2500.0,
+        "remaining": -5093.5,
+        "remaining_pp": -2546.75,
+        "status": "EXCEEDING BUDGET"
+      }
+    },
+    {
+      "trip": {
+        "region": "West Europe",
+        "country": "France",
+        "days": 5,
+        "travelers": 2,
+        "budgetRM": 5000,
+        "season": "Peak",
+        "travelFocus": "City-focused",
+        "dailyExpenses": {
+          "meals": {
+            "mode": "suggested",
+            "percentage": "",
+            "customAmountRM": ""
+          },
+          "miscellaneous": {
+            "mode": "suggested",
+            "percentage": "",
+            "customAmountRM": ""
+          }
+        }
+      },
+      "expected": {
+        "breakdown": {
+          "accommodation": 2760.0,
+          "public_transport": 569.9999999999999,
+          "return_transport": 9206.400000000001,
+          "meals": 1300,
+          "miscellaneous": 600,
+          "attractions": 60
+        },
+        "breakdown_pp": {
+          "accommodation": 1380.0,
+          "public_transport": 284.99999999999994,
+          "return_transport": 4603.200000000001,
+          "meals": 650.0,
+          "miscellaneous": 300.0,
+          "attractions": 30.0
+        },
+        "total": 14496.4,
+        "per_person": 7248.2,
+        "budget_pp": 2500.0,
+        "remaining": -9496.4,
+        "remaining_pp": -4748.2,
+        "status": "EXCEEDING BUDGET"
+      }
+    },
+    {
+      "trip": {
+        "region": "West Europe",
+        "country": "France",
+        "days": 5,
+        "travelers": 2,
+        "budgetRM": 5000,
+        "season": "Peak",
+        "travelFocus": "City-focused",
+        "dailyExpenses": {
+          "meals": {
+            "mode": "increase",
+            "percentage": 25,
+            "customAmountRM": ""
+          },
+          "miscellaneous": {
+            "mode": "decrease",
+            "percentage": 50,
+            "customAmountRM": ""
+          }
+        }
+      },
+      "expected": {
+        "breakdown": {
+          "accommodation": 2760.0,
+          "public_transport": 569.9999999999999,
+          "return_transport": 9206.400000000001,
+          "meals": 1625.0,
+          "miscellaneous": 300.0,
+          "attractions": 60
+        },
+        "breakdown_pp": {
+          "accommodation": 1380.0,
+          "public_transport": 284.99999999999994,
+          "return_transport": 4603.200000000001,
+          "meals": 812.5,
+          "miscellaneous": 150.0,
+          "attractions": 30.0
+        },
+        "total": 14521.4,
+        "per_person": 7260.7,
+        "budget_pp": 2500.0,
+        "remaining": -9521.4,
+        "remaining_pp": -4760.7,
+        "status": "EXCEEDING BUDGET"
+      }
+    },
+    {
+      "trip": {
+        "region": "West Europe",
+        "country": "France",
+        "days": 5,
+        "travelers": 2,
+        "budgetRM": 5000,
+        "season": "Peak",
+        "travelFocus": "City-focused",
+        "dailyExpenses": {
+          "meals": {
+            "mode": "custom",
+            "percentage": "",
+            "customAmountRM": 0
+          },
+          "miscellaneous": {
+            "mode": "custom",
+            "percentage": "",
+            "customAmountRM": 12.75
+          }
+        }
+      },
+      "expected": {
+        "breakdown": {
+          "accommodation": 2760.0,
+          "public_transport": 569.9999999999999,
+          "return_transport": 9206.400000000001,
+          "meals": 0,
+          "miscellaneous": 127.5,
+          "attractions": 60
+        },
+        "breakdown_pp": {
+          "accommodation": 1380.0,
+          "public_transport": 284.99999999999994,
+          "return_transport": 4603.200000000001,
+          "meals": 0.0,
+          "miscellaneous": 63.75,
+          "attractions": 30.0
+        },
+        "total": 12723.9,
+        "per_person": 6361.95,
+        "budget_pp": 2500.0,
+        "remaining": -7723.9,
+        "remaining_pp": -3861.95,
+        "status": "EXCEEDING BUDGET"
+      }
+    }
+  ],
+  "schedule": {
+    "input": [
+      {
+        "name": "Z Museum",
+        "area": "West",
+        "slot": "Evening",
+        "price": 10,
+        "day": null
+      },
+      {
+        "name": "A Walk",
+        "area": "Old Town",
+        "slot": "Morning",
+        "price": 0,
+        "day": null
+      },
+      {
+        "name": "B Gallery",
+        "area": "Old Town",
+        "slot": "Morning",
+        "price": 20,
+        "day": null
+      },
+      {
+        "name": "C Garden",
+        "area": "Old Town",
+        "slot": "Evening",
+        "price": 5,
+        "day": null
+      },
+      {
+        "name": "D Market",
+        "area": "Unspecified",
+        "slot": "Morning",
+        "price": 0,
+        "day": null
+      },
+      {
+        "name": "E Tower",
+        "area": "West",
+        "slot": "Evening",
+        "price": 30,
+        "day": null
+      },
+      {
+        "name": "F Overflow",
+        "area": "West",
+        "slot": "Afternoon",
+        "price": 999,
+        "day": null
+      }
+    ],
+    "expected": [
+      {
+        "name": "Z Museum",
+        "area": "West",
+        "slot": "Evening",
+        "price": 10,
+        "day": 2
+      },
+      {
+        "name": "A Walk",
+        "area": "Old Town",
+        "slot": "Morning",
+        "price": 0,
+        "day": 1
+      },
+      {
+        "name": "B Gallery",
+        "area": "Old Town",
+        "slot": "Afternoon",
+        "price": 20,
+        "day": 1
+      },
+      {
+        "name": "C Garden",
+        "area": "Old Town",
+        "slot": "Evening",
+        "price": 5,
+        "day": 1
+      },
+      {
+        "name": "D Market",
+        "area": "Unspecified",
+        "slot": "Morning",
+        "price": 0,
+        "day": 2
+      },
+      {
+        "name": "E Tower",
+        "area": "West",
+        "slot": "Evening",
+        "price": 30,
+        "day": null
+      },
+      {
+        "name": "F Overflow",
+        "area": "West",
+        "slot": "Afternoon",
+        "price": 999,
+        "day": 2
+      }
+    ],
+    "groupTotal": 2068
+  },
+  "rounding": [
+    {
+      "input": 1.125,
+      "expected": 1.12
+    },
+    {
+      "input": 1.375,
+      "expected": 1.38
+    },
+    {
+      "input": 2.675,
+      "expected": 2.67
+    },
+    {
+      "input": -1.125,
+      "expected": -1.12
+    },
+    {
+      "input": 0.005,
+      "expected": 0.01
+    },
+    {
+      "input": 4690.285,
+      "expected": 4690.28
+    },
+    {
+      "input": 4095.995,
+      "expected": 4095.99
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+:root {
+  font-family: 'Inter', 'Aptos', 'Segoe UI', sans-serif;
+  color: #202b27;
+  background: #faf9f6;
+  font-synthesis: none;
+  --canvas: #faf9f6;
+  --surface: #ffffff;
+  --ink: #202b27;
+  --muted: #606b63;
+  --green: #154e47;
+  --green-hover: #0a3933;
+  --mint: #eaf0e8;
+  --line: #dce1d9;
+  --error: #9d352c;
+  --radius: 12px;
+}
